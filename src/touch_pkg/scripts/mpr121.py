@@ -30,6 +30,7 @@ def touch():
 			ref_value[j,i]=cap[j][i].raw_value
 	print("reference values set")
 	while not rospy.is_shutdown():
+		msg.touchSens.clear()
 		for j in range(4):
 			for i in range(12):
 				tM.val_raw=cap[j][i].raw_value
